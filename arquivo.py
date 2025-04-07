@@ -19,7 +19,20 @@ def solicitar_notas():
     
     return soma_notas, quantidade_notas
 
+# Função para calcular a média
+def calcular_media(soma_notas, quantidade_notas):
+    if quantidade_notas > 0:
+        media = soma_notas / quantidade_notas
+        return media
+    else:
+        return "nada"
 
+# Função para verificar se o aluno passou ou precisa de recuperação
+def verificar_aprovacao(media):
+    if 7 <= media <= 10:
+        print(f"Você passou! Sua média foi: {media:.2f}")
+    else:
+        print(f"Você precisará fazer recuperação. Sua média foi: {media:.2f}")
 
 # Função principal que integra todo o processo
 def main():
